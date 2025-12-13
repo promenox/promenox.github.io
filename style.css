@@ -11,8 +11,16 @@ body {
     text-align: center;
 }
 
-/* simple thin table border */
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+/* header */
+header {
+    background-color: magenta;
+    text-align: center;
+    padding: 8px;
+}
+
+/* footer */
+footer {
+    background-color: magenta;
+    text-align: center;
+    padding: 8px;
 }
