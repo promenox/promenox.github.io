@@ -23,7 +23,7 @@ body {
 /* header */
 header {
     color: #2B2B2B;
-    background-color: white;
+    background-color: #FFFFFF;
     text-align: center;
     padding: 8px;
     animation: hue-animation 3s linear infinite;
@@ -32,7 +32,7 @@ header {
 /* footer */
 footer {
     color: #2B2B2B;
-    background-color: white;
+    background-color: #FFFFFF;
     text-align: center;
     padding: 8px;
 }
