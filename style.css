@@ -11,16 +11,28 @@ body {
     text-align: center;
 }
 
+@keyframes hue-animation {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
 /* header */
 header {
-    background-color: magenta;
+    color: #2B2B2B;
+    background-color: white;
     text-align: center;
     padding: 8px;
+    animation: hue-animation 3s linear infinite;
 }
 
 /* footer */
 footer {
-    background-color: magenta;
+    color: #2B2B2B;
+    background-color: white;
     text-align: center;
     padding: 8px;
 }
