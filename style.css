@@ -1,38 +1,114 @@
-/* page */
+:root {
+  --bg: #0F1115;
+  --bg-elev: #14171D;
+  --text: #E8E4DC;
+  --muted: #8A8F98;
+  --rule: #232830;
+  --accent: #E8702A;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    /* background */
-    background-color: #2B2B2B; 
-    /* text */
-    color: #FFFFFF;
-    font-family: sans-serif;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes hue-animation {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
 }
 
-/* header */
-header {
-    color: #2B2B2B;
-    background-color: #FFFFFF;
-    text-align: center;
-    padding: 8px;
-    animation: hue-animation 3s linear infinite;
+.fox {
+  width: 168px;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  margin-bottom: 2.75rem;
+  filter: drop-shadow(0 12px 28px rgba(232, 112, 42, 0.12));
 }
 
-/* footer */
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.tagline {
+  margin: 0.75rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.rule {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.lede {
+  max-width: 38ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
 footer {
-    color: #2B2B2B;
-    background-color: #FFFFFF;
-    text-align: center;
-    padding: 8px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border-top: 1px solid var(--rule);
+  background: var(--bg-elev);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+footer p { margin: 0; }
+
+footer .label {
+  color: var(--text);
+  font-weight: 500;
+  margin-right: 0.35rem;
+}
+
+.byhuman {
+  height: 36px;
+  width: auto;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fox { animation: drift 6s ease-in-out infinite; }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
 }
