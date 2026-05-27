@@ -77,6 +77,24 @@ h1 {
   font-size: 0.95rem;
 }
 
+.soon {
+  margin: 1.5rem 0 0;
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .soon { animation: pulse 2.8s ease-in-out infinite; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 0.95; }
+}
+
 footer {
   padding: 1.5rem 1.5rem 1.75rem;
   border-top: 1px solid var(--rule);
