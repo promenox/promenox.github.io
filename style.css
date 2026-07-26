@@ -42,7 +42,7 @@ main {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   margin-bottom: 2.75rem;
-  filter: drop-shadow(0 12px 28px rgba(232, 112, 42, 0.12));
+  filter: drop-shadow(0 12px 28px rgba(232, 112, 42, 0.12)) drop-shadow(0 0 1px rgba(232, 228, 220, 0.45));
 }
 
 h1 {
